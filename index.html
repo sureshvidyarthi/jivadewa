@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jivadewa Security & Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', // dark navy
+                        accent: '#facc15', // yellow
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-white text-gray-800 scroll-smooth">
+
+    <!-- 🌐 Navbar -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- 🔰 Logo -->
+            <div class="text-xl font-bold text-primary">Jivadewa <span class="text-xl text-yellow-500">Security &
+                    Intelligence</span>
+            </div>
+
+            <!-- 🌐 Nav Links (Desktop) -->
+            <nav class="hidden md:flex space-x-8 text-gray-700 font-medium justify-center flex-1">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#services" class="hover:text-primary transition">Services</a>
+                <a href="#team" class="hover:text-primary transition">Team</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- 🍔 Hamburger (Mobile) -->
+            <button id="hamburgerBtn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- 📱 Mobile Sidebar -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+            <div class="fixed top-0 left-0 w-64 bg-white h-full shadow-lg p-6 transform transition-transform duration-300 -translate-x-full"
+                id="sidebar">
+                <!-- ❌ Close Btn -->
+                <button id="closeBtn" class="absolute top-4 right-4 text-gray-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- 📲 Mobile Nav Links -->
+                <nav class="mt-10 space-y-4 text-lg text-gray-700 font-medium">
+                    <a href="#home" class="block hover:text-primary">Home</a>
+                    <a href="#services" class="block hover:text-primary">Services</a>
+                    <a href="#team" class="block hover:text-primary">Team</a>
+                    <a href="#about" class="block hover:text-primary">About</a>
+                    <a href="#contact" class="block hover:text-primary">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Next: Hero Section (Home) -->
+    <section id="home"
+        class="pt-20 min-h-screen bg-gradient-to-br from-black via-gray-900 to-zinc-800 relative overflow-hidden flex items-center justify-center">
+        <!-- Decorative BG Circles -->
+        <div class="absolute -top-20 -left-20 w-[400px] h-[400px] bg-yellow-500 rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-yellow-400 rounded-full opacity-10 blur-2xl"></div>
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+        <!-- Content -->
+        <div
+            class="relative z-10 max-w-5xl w-full px-6 flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 tracking-wide">
+                Your Safety, <span class="text-accent underline underline-offset-8">Our Mission</span>
+            </h1>
+            <p
+                class="text-lg md:text-xl bg-white/10 backdrop-blur-md px-6 py-4 rounded-lg max-w-2xl border border-white/10 shadow-xl mb-8">
+                Trusted, disciplined, and alert security guards for malls, hospitals, events, and construction sites.
+            </p>
+            <a href="https://wa.me/919898987898" target="_blank"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full text-lg shadow-md transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M20.52 3.48A11.83 11.83 0 0012 0C5.37 0 .02 5.35.02 11.98c0 2.11.55 4.18 1.59 6.01L0 24l6.2-1.61a12.07 12.07 0 005.8 1.48h.01c6.63 0 11.99-5.35 11.99-11.98a11.84 11.84 0 00-3.48-8.39zM12 22.09a10.09 10.09 0 01-5.13-1.4l-.37-.22-3.68.96.98-3.58-.24-.37a9.99 9.99 0 01-1.53-5.41C1.03 6.47 5.46 2.04 11.99 2.04c2.67 0 5.18 1.04 7.07 2.93a9.96 9.96 0 012.93 7.01c0 5.52-4.44 9.96-9.99 9.96zm5.49-7.43c-.3-.15-1.77-.88-2.05-.98-.28-.1-.49-.15-.7.15s-.8.98-.98 1.18c-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.5a9.1 9.1 0 01-1.67-2.07c-.17-.3-.02-.46.13-.6.13-.13.3-.34.45-.51.15-.17.2-.28.3-.47.1-.2.05-.37-.03-.52-.08-.15-.7-1.69-.96-2.32-.25-.6-.5-.52-.7-.52l-.6-.01c-.2 0-.52.07-.79.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.24 3.1c.15.2 2.12 3.25 5.14 4.55.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.41.25-.68.25-1.28.18-1.41-.07-.12-.26-.2-.56-.34z" />
+                </svg>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- 📊 Numbers Section -->
+    <section class="grid md:grid-cols-2">
+        <!-- Left Content -->
+        <div class="bg-gray-50 px-8 py-16 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold mb-6 leading-tight">
+                Delivering Trusted Security Services <br />
+                Across Bihar & Beyond
+            </h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Jivadewa Security and Intelligence Services Pvt. Ltd. ensures discipline, professionalism, and 24/7
+                vigilance
+                across commercial, industrial, and residential properties. With verified personnel and customized
+                deployment,
+                your peace of mind is our mission.
+            </p>
+            <a href="#contact" class="text-red-600 font-semibold hover:underline flex items-center space-x-2">
+                <span>CLICK HERE</span>
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Right Stats -->
+        <div class="bg-red-600 text-white px-8 py-16 flex flex-col justify-center">
+            <h4 class="uppercase text-sm tracking-widest text-center mb-10">Let's Numbers Talk</h4>
+            <div class="grid grid-cols-2 gap-y-10 gap-x-6 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold">10+</h3>
+                    <p class="text-sm mt-2">Years in Service</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold">750+</h3>
+                    <p class="text-sm mt-2">Happy Clients</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold">180+</h3>
+                    <p class="text-sm mt-2">Trained Guards</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold">3K+</h3>
+                    <p class="text-sm mt-2">Properties Secured</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800">Our Services</h2>
+            <p class="text-lg text-gray-600 mb-12">Trusted security solutions for all your needs.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Mall Security -->
+                <div
+                    class="bg-[#f0f9ff] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#3b82f6]/50">
+                    <div class="text-[#3b82f6] text-4xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mall Security</h3>
+                    <p class="text-gray-600">Expert guards ensuring safe and secure shopping environments.</p>
+                </div>
+
+                <!-- Shopping Complex -->
+                <div
+                    class="bg-[#fff7ed] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#fb923c]/50">
+                    <div class="text-[#fb923c] text-4xl mb-4">🏢</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Shopping Complex</h3>
+                    <p class="text-gray-600">Round-the-clock security for commercial buildings and complexes.</p>
+                </div>
+
+                <!-- Hospital Security -->
+                <div
+                    class="bg-[#ecfdf5] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#10b981]/50">
+                    <div class="text-[#10b981] text-4xl mb-4">🏥</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Hospital Security</h3>
+                    <p class="text-gray-600">Trained guards for sensitive and emergency medical environments.</p>
+                </div>
+
+                <!-- Construction Sites -->
+                <div
+                    class="bg-[#fef2f2] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#ef4444]/50">
+                    <div class="text-[#ef4444] text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Construction Sites</h3>
+                    <p class="text-gray-600">Protecting valuable equipment and materials 24/7 on site.</p>
+                </div>
+
+                <!-- Event Security -->
+                <div
+                    class="bg-[#fdf4ff] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#d946ef]/50">
+                    <div class="text-[#d946ef] text-4xl mb-4">🎤</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Event Security</h3>
+                    <p class="text-gray-600">Professional crowd control and VIP protection for all events.</p>
+                </div>
+
+                <!-- 24x7 Surveillance -->
+                <div
+                    class="bg-[#fefce8] rounded-xl p-8 transition-all transform hover:-translate-y-2 shadow-md hover:shadow-lg hover:shadow-[#eab308]/50">
+                    <div class="text-[#eab308] text-4xl mb-4">🕒</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">24x7 Surveillance</h3>
+                    <p class="text-gray-600">Continuous monitoring with trained professionals and smart tech.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 👮 Our Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10 text-gray-800">Meet Our Trained Professionals</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:border hover:border-purple-500">
+                    <img src="team1.png" alt="Ramesh Kumar"
+                        class="mx-auto rounded-full mb-4 w-28 h-28 object-cover shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Ramesh Kumar</h3>
+                    <p class="text-sm text-gray-600">Head Security Guard</p>
+                </div>
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:border hover:border-purple-500">
+                    <img src="team1.png" alt="Sunita Devi"
+                        class="mx-auto rounded-full mb-4 w-28 h-28 object-cover shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Sunita Devi</h3>
+                    <p class="text-sm text-gray-600">Site Supervisor</p>
+                </div>
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:border hover:border-purple-500">
+                    <img src="team1.png" alt="Ajay Thakur"
+                        class="mx-auto rounded-full mb-4 w-28 h-28 object-cover shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Ajay Thakur</h3>
+                    <p class="text-sm text-gray-600">Response Unit Leader</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 🧾 Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Testimonial</h2>
+                <a href="#!" class="text-red-500 font-medium hover:underline flex items-center space-x-1">
+                    <span>View All</span>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <p class="text-gray-800 text-base mb-6">
+                        "I had an amazing experience! The service was timely and exceeded my expectations. Highly
+                        recommended to
+                        anyone looking for quality work."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full"
+                            alt="Guddu Bhaiya">
+                        <div>
+                            <h4 class="font-semibold text-sm tracking-widest">GUDDU BHAIYA</h4>
+                            <p class="text-xs text-gray-500">Yelp Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <p class="text-gray-800 text-base mb-6">
+                        "Truly impressed by the dedication and quality. From start to finish, everything was handled so
+                        smoothly.
+                        Thank you for the great work!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-12 h-12 rounded-full"
+                            alt="Pinki Devi">
+                        <div>
+                            <h4 class="font-semibold text-sm tracking-widest">PINKI DEVI</h4>
+                            <p class="text-xs text-gray-500">Yelp Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <p class="text-gray-800 text-base mb-6">
+                        "Professional and reliable — exactly what I needed. I’ll definitely come back again and also
+                        refer
+                        others."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-12 h-12 rounded-full"
+                            alt="Lallan Babu">
+                        <div>
+                            <h4 class="font-semibold text-sm tracking-widest">LALLAN BABU</h4>
+                            <p class="text-xs text-gray-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- 🧾 About Us Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-8">
+                <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">About Jivadewa Security & Intelligence
+                </h2>
+                <p class="text-lg leading-relaxed text-gray-700 text-center">
+                    Founded with a mission to redefine safety standards,
+                    <strong class="text-purple-800">Jivadewa Security and Intelligence Services Pvt. Ltd.</strong>
+                    is a trusted name in Bihar’s private security sector. From malls to construction
+                    sites, we provide trained and verified personnel for all types of locations.
+                    Our focus is your peace of mind — with professional, disciplined, and vigilant
+                    security services tailored to your needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="bg-white py-16 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <!-- Contact Info -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-10">
+                <!-- Address -->
+                <div>
+                    <div class="flex items-center justify-center mb-2 text-red-600 text-2xl">
+                        📍
+                    </div>
+                    <h4 class="font-bold uppercase text-sm tracking-wide text-gray-700">Head Office</h4>
+                    <p class="text-gray-600 mt-1">Sabour, Bhagalpur, Bihar - 83324</p>
+                </div>
+                <!-- Email -->
+                <div>
+                    <div class="flex items-center justify-center mb-2 text-red-600 text-2xl">
+                        ✉️
+                    </div>
+                    <h4 class="font-bold uppercase text-sm tracking-wide text-gray-700">Email</h4>
+                    <p class="text-gray-600 mt-1">jivadewa@gmail.com</p>
+                </div>
+                <!-- Phone -->
+                <div>
+                    <div class="flex items-center justify-center mb-2 text-red-600 text-2xl">
+                        📞
+                    </div>
+                    <h4 class="font-bold uppercase text-sm tracking-wide text-gray-700">Phone</h4>
+                    <p class="text-gray-600 mt-1">9898767898</p>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+                <iframe class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Sabour,+Bhagalpur,+Bihar&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 🔻 Footer -->
+    <footer class="bg-primary text-white py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-lg font-bold mb-2">Quick Links</h4>
+                <ul class="space-y-1 text-sm">
+                    <li><a href="#home" class="hover:text-accent">Home</a></li>
+                    <li><a href="#services" class="hover:text-accent">Services</a></li>
+                    <li><a href="#team" class="hover:text-accent">Our Team</a></li>
+                    <li><a href="#about" class="hover:text-accent">About Us</a></li>
+                    <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-2">Contact Info</h4>
+                <p class="text-sm">📍 Sabour, Bhagalpur, Bihar - 83324</p>
+                <p class="text-sm">📞 <a href="tel:9898767898" class="hover:text-accent">9898767898</a></p>
+                <p class="text-sm">📧 <a href="mailto:jivadewa@gmail.com"
+                        class="hover:text-accent">jivadewa@gmail.com</a>
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-2">Jivadewa Security</h4>
+                <p class="text-sm">Reliable, Disciplined & Vigilant Security Solutions.</p>
+                <p class="text-sm mt-2">© 2025 Jivadewa Security Pvt. Ltd.<br>All rights reserved.</p>
+                <p class="text-sm mt-2">Made with <span class="text-red-400">❤️</span> by <a href="#"
+                        class="hover:text-accent">EncodingoTech</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                sidebar.classList.remove('-translate-x-full');
+            }, 10); // short delay to trigger transition
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300); // wait for transition to complete
+        });
+
+        // Optional: close sidebar when clicking outside it
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                sidebar.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
